@@ -1,4 +1,27 @@
 {% extends "homepage/base.html" %}
 {% block content %}
+
     <h1>Dvojkařský zpěvník</h1>
+
+    <p>
+        Zpěvník si klade za cíl být striktně lepší náhradou nynějších zpěvníků jakéhokoliv druhu poskytující všemožné
+        designové a funkční vylepšení (umožněné programem LaTeX). Najdete tu značné množství písniček, které tvůrci
+        považují za hodící se k ohni s kytarou i s akordy na kytaru. Kromě táborákových evergreenů a aktuálních hitů
+        jsme do zpěvníku zapracovali i historické verze Dvojkařských písniček, které se přes svojí přitažlivost, exotiku
+        a romantiku jen zřídka vyskytují v ostatních zdrojích.
+    </p>
+
+    <h2>Stažení</h2>
+
+    <p>
+        Zpěvník lze stáhnout ve <a href="{% url 'homepage-download' %}">stažení</a>.
+        Pokud máte starší verze zpěvníku, je možné vybrat si z obsahu pouze některé písničky ke zpracování do PDF.
+    </p>
+
+    <h2>Vývoj</h2>
+
+    <p>
+        Kód zpěvníku je k dispozici i na <a href="https://github.com/JindrazPrahy/DvojkarskyZpevnik">GitHubu</a>.
+    </p>
+
 {% endblock %}
