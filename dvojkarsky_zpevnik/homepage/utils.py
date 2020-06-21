@@ -82,7 +82,7 @@ def produce_songs_pdf(songs_dict):
         if os.path.isfile(logfile):
             with open(os.path.join(logfile), "r") as f:
                 content = f.readlines()
-        # clean_songs(songs_id, tex_path)
+        _clean_songs(songs_id, tex_dir)
         return None, content
     shutil.copy2(pdffile, result_path)
     _clean_songs(songs_id, tex_dir)
