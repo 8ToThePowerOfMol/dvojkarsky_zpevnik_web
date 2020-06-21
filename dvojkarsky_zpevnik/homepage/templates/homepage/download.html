@@ -4,6 +4,9 @@
 
     <p>
         Podle obsahu zpěvníku jsou pro stažení k dispozici 2 varianty zpěvníku: plný a výběrový.
+        Plný zpěvník je nejaktuálnější verze zpěvníku, jak je k dostání na táboře.
+        Výběrová verze umožňuje vybrat písničky ze všech nakódovaných (některé nejsou ve zpěvníku) pro možný tisk do
+        již existujícího zpěvníku.
     </p>
 
     <h2>Plná verze</h2>
@@ -16,6 +19,27 @@
 
     <h2>Výběrová verze</h2>
 
+    Možnost stáhnutí PDF obsahující pouze některé písničky.
+
+    <form method="post" action=".">
+        {% csrf_token %}
+        <h3>Krok 1: Výběr</h3>
+
+        Z následujícího seznamu zaškrtni, které písničky chceš dostat do PDF.
+
+        <table style="font-family: sans-serif; margin: 1rem;">
+        {{ form.as_table }}
+        </table>
+
+        <h3>Krok 2: Stažení</h3>
+
+        <p>
+            Po vybrání písniček se ti po stiknutí vygenerovat otevře PDF obsahující jen vybrané písničky.
+            Doporučuji vygenerované PDFko hned uložit.
+        </p>
+
+        <input type="submit" value="Generovat">
+    </form>
 
 
 {% endblock %}

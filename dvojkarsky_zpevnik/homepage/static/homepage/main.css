@@ -8,6 +8,10 @@ h1, h2, h3, h4, h5, h6 {
   color: #444444;
 }
 
+h3 {
+  margin-top: 1rem;
+}
+
 ul {
   margin: 0;
 }
@@ -34,4 +38,17 @@ ul {
   border: 1px solid #dddddd;
   border-radius: 3px;
   margin-bottom: 20px;
+}
+
+table, th, td {
+  font-weight:normal;
+  padding-right: 1em;
+}
+
+th {
+  text-align: right;
+}
+
+td {
+  text-align: left;
 }
