@@ -28,7 +28,7 @@ def get_songname_from_texfile(file):
     songname = _cleanlatex(content.split("\\\\")[0])
     songauthor = _cleanlatex(content.split("\\\\")[1]) if "\\\\" in content else ""
     ret = "{} ({})".format(songname, songauthor)
-    ret = ret.replace("( ", "(")
+    ret = re.sub(re.compile("\(\s*"), "(", ret)
     ret = re.sub(re.compile("\s*\)"), ")", ret)
     ret = ret.replace(" ()", "")
     ret = re.sub(re.compile("\s*$"), "", ret)
